@@ -2,16 +2,15 @@
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
 
-# Source shell configs
+# 1. Source Shared Configs (Works in Bash and Zsh)
+[ -f "$DOTFILES/aliases" ] && source "$DOTFILES/aliases"
+
+# 2. Source Shell-Specific Configs
 if [ -n "$ZSH_VERSION" ]; then
-    # Zsh specific settings
     [ -f "$DOTFILES/prompt.sh" ] && source "$DOTFILES/prompt.sh"
-else
-    # Fallback logic for Bash/Sh
-    [ -f "$DOTFILES/aliases" ] && source "$DOTFILES/aliases"
 fi
 
-# One-time setup (only runs if script is executed, not just sourced)
+# 3. One-time setup
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     chmod +x "$DOTFILES/semantic-branch.sh"
     git config --global core.excludesfile "$DOTFILES/gitignore_global"
