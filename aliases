@@ -1,0 +1,66 @@
+# Dev-env repo root (set when sourcing this file)
+export DEV_ENV="${DEV_ENV:-$HOME/Documents/dev-env}"
+
+alias c='clear'
+alias l='ls -lahG'
+alias ls='ls --color=auto -G'
+alias o='open .'
+alias path='echo -e ${PATH//:/\\n}'
+alias grep='grep --color=auto '
+
+# Get week number
+
+alias week='date +%V'
+
+# Git
+
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcod='git checkout develop'
+alias gcom='git checkout master'
+
+alias ga='git add'
+alias gaa='git add --all'
+
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbnew='$DEV_ENV/dotfiles/semantic-branch.sh'
+
+alias gbd='git branch -d'
+
+alias gcan='git commit --amend --no-edit'
+alias gcar='git commit --amend --reset-author'
+
+alias gce='git config --edit'
+alias gceg='git config --edit --global'
+
+alias gd='git diff'
+
+alias gf='git fetch'
+
+alias gl='git log'
+alias glg='git log --graph'
+alias gls='git log --stat'
+alias glps='git log -p --stat'
+alias gladg='git log --all --decorate --graph'
+alias glgb='git log --graph --max-count=10'
+alias gldo='git log --decorate --oneline'
+alias gldgo='git log --decorate --graph --oneline'
+alias gladgo='git log --all --decorate --graph --oneline'
+alias glog='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
+alias gloga='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all'
+
+alias gp='git push'
+alias gpf='git push -f'
+
+alias gpull='git pull'
+
+alias grb='git reset --hard @{u}'
+
+alias gs='git status'
+
+alias gundo='git reset head~1'
+
+# Flush Directory Service cache
+
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
