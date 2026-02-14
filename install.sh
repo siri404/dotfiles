@@ -14,5 +14,6 @@ fi
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     chmod +x "$DOTFILES/semantic-branch.sh"
     git config --global core.excludesfile "$DOTFILES/gitignore_global"
-    echo "Dotfiles setup complete."
 fi
+
+echo "Dotfiles have been setup!"
