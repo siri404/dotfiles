@@ -14,7 +14,6 @@ fi
 if [[ "${BASH_SOURCE[0]:-${(%):-%x}}" == "${0}" ]]; then
     chmod +x "$DOTFILES/semantic-branch.sh"
     git config --global core.excludesfile "$DOTFILES/gitignore_global"
-    echo "Project Umka dotfiles setup complete!"
 fi
 
 echo "Dotfiles have been setup!"
