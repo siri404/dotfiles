@@ -61,6 +61,10 @@ alias gs='git status'
 
 alias gundo='git reset head~1'
 
+# GH
+
+alias gpr='gh pr create --fill --head $(git rev-parse --abbrev-ref HEAD)-$(date +%H%M)'
+
 # Flush Directory Service cache
 
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
