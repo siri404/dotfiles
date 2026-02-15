@@ -39,7 +39,7 @@ The `install.sh` script is the orchestrator of my dotfiles deployment. When sett
 
 My `.gitignore_global` file lives within my dotfiles and is configured as Git's global ignore file. This ensures that personal development artifacts, IDE-specific files (e.g., `.vscode/`), operating system cruft (e.g., `.DS_Store`), and temporary files are automatically excluded from *all* Git repositories, regardless of project-specific `.gitignore` rules. This keeps repositories clean and focused solely on project code.
 
-## My Personal MacBook: Zsh and the Local Experience
+## Local Machine Development: Your Personalized macOS Zsh Environment
 
 On my personal MacBook, the local development environment is powered by the Zsh shell, enhanced by the configurations within my `~/.dotfiles` repository. This section details how these components integrate to provide a rich and efficient local experience.
 
@@ -68,7 +68,7 @@ The combination of Zsh and my dotfiles transforms the terminal into a highly pro
 
 This local setup serves as my primary development environment for projects that don't require the strict isolation or specific OS of a Dev Container, providing speed and direct hardware access when needed.
 
-## The Ubuntu Dev Container: Reproducible Cloud Development
+## Dev Container Development: Reproducible Ubuntu Bash Environment
 
 When working on projects that demand specific operating systems, isolated environments, or easy onboarding for new team members, the Ubuntu Dev Container becomes my go-to solution. This containerized environment provides a consistent and reproducible workspace, decoupled from my local macOS setup, while still benefiting from my personalized dotfiles.
 
